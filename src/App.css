@@ -1,0 +1,450 @@
+/* --- CSS Variables for a Fresh, Modern Theme --- */
+:root {
+  --bg-color: #111827; /* New: Dark Slate Blue */
+  --primary-color: #2563eb; /* Blue */
+  --secondary-color: #db2777; /* Pink */
+  --hover-green: #16a34a;
+  --hover-orange: #ea580c;
+  --text-color-light: #f9fafb;
+  --text-color-medium: #d1d5db;
+  --text-color-dark: #9ca3af;
+  --card-bg: #1f2937; /* New: Lighter Slate for cards */
+  --border-color: #374151; /* New: Adjusted border color */
+}
+
+/* The rest of your App.css file remains the same... */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  background: var(--bg-color);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color-medium);
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* --- Animated Gradient Background --- */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 20%, var(--primary-color), transparent 40%),
+              radial-gradient(circle at 80% 80%, var(--secondary-color), transparent 40%);
+  filter: blur(120px);
+  opacity: 0.25;
+  z-index: -1;
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-30px) translateX(10px); }
+}
+
+/* --- Main Portfolio Container --- */
+.portfolio-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+  padding: 24px 0;
+  position: sticky;
+  top: 0;
+  background: rgba(17, 24, 39, 0.8); /* Adjusted for new background */
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+.main-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--text-color-light);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+}
+.main-header ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+}
+.main-header a {
+  color: var(--text-color-medium);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.main-header a:hover {
+  color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  text-align: center;
+  padding: 100px 0;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-content h1 {
+  font-size: 3.2em;
+  color: var(--text-color-light);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.subtitle {
+  font-size: 1.2em;
+  color: var(--text-color-medium);
+  max-width: 600px;
+  margin: 0 auto 32px auto;
+}
+.cta-button {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* --- General Content Section Styling --- */
+.content-section {
+  padding: 80px 0;
+  border-top: 1px solid var(--border-color);
+}
+.content-section h2 {
+  font-size: 2.5em;
+  color: var(--text-color-light);
+  text-align: center;
+  margin-bottom: 48px;
+}
+.professional-summary {
+  font-size: 1.1em;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-color-dark);
+}
+
+/* --- Project Grid & Cards --- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+/* Different hover colors for projects */
+.project-card:nth-child(4n + 1):hover {
+  border-color: var(--primary-color); /* Blue */
+}
+.project-card:nth-child(4n + 1):hover .project-header h3 {
+  color: var(--primary-color);
+}
+.project-card:nth-child(4n + 2):hover {
+  border-color: var(--secondary-color); /* Pink */
+}
+.project-card:nth-child(4n + 2):hover .project-header h3 {
+  color: var(--secondary-color);
+}
+.project-card:nth-child(4n + 3):hover {
+  border-color: var(--hover-green); /* Green */
+}
+.project-card:nth-child(4n + 3):hover .project-header h3 {
+  color: var(--hover-green);
+}
+.project-card:nth-child(4n + 4):hover {
+  border-color: var(--hover-orange); /* Orange */
+}
+.project-card:nth-child(4n + 4):hover .project-header h3 {
+  color: var(--hover-orange);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.project-header h3 {
+  font-size: 1.5em;
+  color: var(--text-color-light);
+  margin: 0;
+  transition: color 0.3s;
+}
+.project-year {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.project-card p {
+  flex-grow: 1;
+}
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+.tech-tags span {
+  background: #374151; /* Adjusted for new theme */
+  color: var(--primary-color);
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+.project-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+.project-links a {
+  color: var(--text-color-light);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s;
+}
+.project-links a:hover {
+  color: var(--primary-color);
+}
+
+/* --- Skills Section --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.skill-category h3 {
+    font-size: 1.5em;
+    color: var(--text-color-light);
+    margin-bottom: 16px;
+    text-align: center;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.skill-pill {
+  background: var(--card-bg);
+  color: var(--text-color-medium);
+  padding: 10px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  font-size: 1em;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+/* Diverse hover colors for skills */
+.skills-container .skill-pill:hover {
+  color: var(--text-color-light);
+  transform: translateY(-2px);
+}
+.skills-container .skill-pill:nth-child(4n + 1):hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.skills-container .skill-pill:nth-child(4n + 2):hover {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+.skills-container .skill-pill:nth-child(4n + 3):hover {
+  background: var(--hover-green);
+  border-color: var(--hover-green);
+}
+.skills-container .skill-pill:nth-child(4n + 4):hover {
+  background: var(--hover-orange);
+  border-color: var(--hover-orange);
+}
+
+
+/* --- Credentials Section --- */
+.credentials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.credentials-column h3, .credentials-column h4 {
+  font-size: 1.8em;
+  color: var(--text-color-light);
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 8px;
+}
+.credentials-column h4 {
+    font-size: 1.2em;
+    margin-bottom: 16px;
+    border-bottom: none;
+    color: var(--text-color-medium);
+}
+.credentials-column .sub-heading {
+    margin-top: 32px;
+}
+.credential-item {
+  margin-bottom: 24px;
+}
+.credential-item strong {
+  color: var(--text-color-light);
+  font-size: 1.1em;
+}
+.credential-item p {
+  margin: 4px 0;
+  color: var(--text-color-dark);
+}
+.credential-item span {
+  font-size: 0.9em;
+  color: var(--text-color-dark);
+}
+
+/* --- Contact Section --- */
+#contact {
+  text-align: center;
+}
+#contact p {
+    max-width: 500px;
+    margin: 0 auto 32px auto;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.contact-link {
+  color: var(--text-color-medium);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+/* New: Different hover colors for contact links */
+.contact-link:hover {
+  transform: translateY(-3px);
+}
+.contact-links .contact-link:nth-child(1):hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.contact-links .contact-link:nth-child(2):hover {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+.contact-links .contact-link:nth-child(3):hover {
+  color: var(--hover-green);
+  border-color: var(--hover-green);
+}
+.contact-links .contact-link:nth-child(4):hover {
+  color: var(--hover-orange);
+  border-color: var(--hover-orange);
+}
+
+
+/* --- Footer --- */
+.main-footer {
+  text-align: center;
+  padding: 40px 0;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-color-dark);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+  .main-header nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .credentials-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* --- Add this at the end of App.css --- */
+
+/* --- Maintenance Page --- */
+.maintenance-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 24px;
+}
+
+.maintenance-container h1 {
+  font-size: 3em;
+  color: var(--text-color-light);
+  margin-bottom: 16px;
+}
+
+.maintenance-container p {
+  font-size: 1.2em;
+  color: var(--text-color-medium);
+  max-width: 500px;
+  margin-bottom: 32px;
+}
