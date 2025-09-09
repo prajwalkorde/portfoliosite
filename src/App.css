@@ -1,3 +1,6 @@
+/* The rest of your App.css file remains the same... */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* --- CSS Variables for a Fresh, Modern Theme --- */
 :root {
   --bg-color: #111827; /* New: Dark Slate Blue */
@@ -11,9 +14,6 @@
   --card-bg: #1f2937; /* New: Lighter Slate for cards */
   --border-color: #374151; /* New: Adjusted border color */
 }
-
-/* The rest of your App.css file remains the same... */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 body {
   background: var(--bg-color);
@@ -421,9 +421,10 @@ body::before {
     grid-template-columns: 1fr;
     gap: 48px;
   }
+  .blog-list-card {
+    grid-template-columns: 1fr;
+  }
 }
-
-/* --- Add this at the end of App.css --- */
 
 /* --- Maintenance Page --- */
 .maintenance-container {
@@ -447,4 +448,146 @@ body::before {
   color: var(--text-color-medium);
   max-width: 500px;
   margin-bottom: 32px;
+}
+
+/* --- Blog Preview Section --- */
+.blog-preview-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-color-medium);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-preview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-preview-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-preview-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-preview-content h3 {
+  font-size: 1.5em;
+  color: var(--text-color-light);
+  margin: 0 0 8px 0;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* --- Blog List Page --- */
+.blog-list-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+.blog-list-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-color-medium);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-list-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--primary-color);
+}
+
+.blog-list-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-list-content {
+  padding: 24px;
+}
+
+/* --- Single Blog Post Page --- */
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.blog-post h1 {
+  font-size: 3em;
+  color: var(--text-color-light);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.blog-post-image {
+  width: 100%;
+  border-radius: 16px;
+  margin: 32px 0;
+}
+
+.blog-post-content {
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+/* --- Publications Section --- */
+.publication-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.publication-card h3 {
+  font-size: 1.8em;
+  color: var(--text-color-light);
+  margin-bottom: 8px;
+}
+
+.publication-authors {
+  font-style: italic;
+  color: var(--text-color-dark);
+  margin-bottom: 4px;
+}
+
+.publication-journal {
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 16px;
 }
