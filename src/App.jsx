@@ -84,7 +84,7 @@ const blogs = [
     id: 1,
     slug: "the-power-of-linux",
     title: "The Power of Linux",
-    date: "26 October 2023",
+    date: "03 July 2025",
     featuredImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     snippet: "Linux isn't just an operating system; it's the quiet engine powering a huge chunk of our digital world.",
     content: "From the servers that host your favourite websites to the Android phone in your pocket, Linux is everywhere. What makes it so special? It's open-source, which means anyone can look at the code, modify it, and share it. This has led to a super stable, secure, and flexible system that tech giants and hobbyists alike swear by. Getting comfortable with the command line in Linux is like unlocking a superpower for any developer."
@@ -93,7 +93,7 @@ const blogs = [
     id: 2,
     slug: "getting-started-with-c",
     title: "Getting Started with C Programming",
-    date: "15 November 2023",
+    date: "07 July 2025",
     featuredImage: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     snippet: "C is like the granddaddy of programming languages, and for good reason. It's fast, powerful, and teaches you what's really happening inside your computer.",
     content: "If you want to understand how memory works and how to write super-efficient code, learning C is a must. It's the language that built operating systems like Linux and Windows. It might seem a bit tricky at first because you have to manage memory yourself, but mastering C gives you a rock-solid foundation that makes learning other languages a breeze."
@@ -102,7 +102,7 @@ const blogs = [
     id: 3,
     slug: "exploring-cpp",
     title: "Exploring C++: The Next Step",
-    date: "5 December 2023",
+    date: "03 August 2025",
     featuredImage: "https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     snippet: "Think of C++ as C's smarter, more sophisticated younger sibling. It takes all the power of C and adds modern features like object-oriented programming.",
     content: "With C++, you can build complex applications like game engines, high-frequency trading systems, and powerful desktop software. It introduces concepts like classes and objects, which help you organise your code in a much cleaner way. Plus, the Standard Template Library (STL) is a treasure trove of ready-to-use tools that can save you heaps of time."
@@ -111,7 +111,7 @@ const blogs = [
     id: 4,
     slug: "linux-kernel-peek",
     title: "A Peek into the Linux Kernel",
-    date: "18 January 2024",
+    date: "12 August 2025",
     featuredImage: "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     snippet: "The Linux kernel is the heart of the operating system, the ultimate manager of your computer's resources.",
     content: "Ever wonder how your computer can run so many programs at once? That's the kernel's job. It handles everything from managing memory and scheduling tasks to talking to your hardware. Diving into the kernel code can be a bit daunting, but it's an amazing way to understand the inner workings of a computer. Contributing to the kernel is a huge achievement for any systems programmer."
@@ -120,7 +120,7 @@ const blogs = [
     id: 5,
     slug: "c-memory-magic",
     title: "C's Memory Magic: A Deep Dive",
-    date: "10 February 2024",
+    date: "29 August 2025",
     featuredImage: "https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     snippet: "In C, you're the boss of memory. This means you have the power to make your programs incredibly fast, but it also comes with great responsibility.",
     content: "Understanding pointers, malloc, and free is key to becoming a C wizard. When you manage memory yourself, you can avoid a lot of the overhead that comes with other languages. But be warned, one small mistake can lead to memory leaks or segmentation faults. It's a thrilling challenge that really sharpens your programming skills."
@@ -129,7 +129,7 @@ const blogs = [
     id: 6,
     slug: "modern-cpp",
     title: "Modern C++: Beyond the Basics",
-    date: "2 March 2024",
+    date: "09 September 2025",
     featuredImage: "https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     snippet: "C++ has come a long way. The latest versions have introduced some amazing features that make the language safer, faster, and more fun to use.",
     content: "Features like smart pointers, lambda expressions, and the range-based for loop have made modern C++ a joy to work with. You can write code that is both highly performant and easy to read. If you've only ever used older versions of C++, you're in for a treat. It's a great time to rediscover this powerful language."
