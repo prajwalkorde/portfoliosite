@@ -1,4 +1,3 @@
-/* The rest of your App.css file remains the same... */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* --- CSS Variables for a Fresh, Modern Theme --- */
@@ -119,7 +118,6 @@ body::before {
   margin: 0 auto 32px auto;
 }
 .cta-button {
-  background: var(--primary-color);
   color: #fff;
   border: none;
   padding: 14px 28px;
@@ -128,14 +126,18 @@ body::before {
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  background: var(--primary-color);
+  transition: transform 0.3s, box-shadow 0.3s, background-size 0.5s ease;
+  background-image: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+  background-size: 250% auto;
 }
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+  background-position: right center;
 }
 
 /* --- General Content Section Styling --- */
