@@ -45,6 +45,12 @@ const education = [
 
 const achievements = {
   technical: [
+    {
+      event: "AWS Certified Cloud Practitioner",
+      result: "",
+      org: "Amazon Web Services (AWS)",
+      link: "https://www.credly.com/badges/c8716bfc-c7b3-4658-a723-ebe774653fe8/public_url"
+    },
     { event: "C Programming Certification", result: "120 Hours | 5 Projects", org: "MKCL" },
     { event: "Problem Solving Certification", result: "", org: "HackerRank" },
     { event: "JavaScript Certification", result: "", org: "HackerRank" },
@@ -350,7 +356,10 @@ function Portfolio() {
               {achievements.technical.map((ach, i) => (
                  <div className="credential-item" key={i}>
                   <strong>{ach.event}</strong>
-                  <p>{ach.result}{ach.org && ` — ${ach.org}`}</p>
+                  <p>
+                    {ach.result}{ach.org && ` — ${ach.org}`}
+                    {ach.link && <a href={ach.link} target="_blank" rel="noopener noreferrer"><ExternalLink size={16} style={{ marginLeft: '8px', verticalAlign: 'middle' }} /></a>}
+                  </p>
                 </div>
               ))}
               <h4 className="sub-heading">Soft Skills</h4>
