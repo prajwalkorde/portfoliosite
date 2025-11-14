@@ -8,24 +8,45 @@ const professionalSummary = "Enthusiastic and detail-oriented systems programmer
 
 const projects = [
   {
-    title: "Share-King",
+    title: "Prash Shell",
     year: "2025",
-    description: "Developed an interactive stock price prediction app with machine learning and real-time graphing. Managed the full stack, from backend data pipelines to frontend model integration and a user-friendly web interface.",
-    tech: ["Python", "Streamlit", "Scikit-learn", "yfinance", "Pandas", "Plotly"],
+    description: "Engineered a custom, lightweight Linux shell to replicate basic Bash functionality, executing both external commands and built-in utilities like cd and history. Managed process creation and control by applying core OS concepts through fork, execvp, and waitpid, and integrated a 100-entry command history feature.",
+    tech: ["C", "Linux System Calls"],
+    codeLink: "https://github.com/prajwalkorde?tab=repositories"
+  },
+  {
+    title: "Linux Character Device Driver",
+    year: "2025",
+    description: "Constructed a functional Linux kernel module that provides a character device interface with a 4KB internal buffer. Implemented standard file operations (open, read, write, llseek) and ensured memory-safe data transfer between kernel and user space using copy_to_user/copy_from_user.",
+    tech: ["C", "Linux Kernel API"],
+    codeLink: "https://github.com/prajwalkorde?tab=repositories"
+  },
+  {
+    title: "Linux System Monitor",
+    year: "2025",
+    description: "Created a real-time, terminal-based system monitor in C, mirroring htop's core features. The tool directly parses the /proc filesystem to track and display live CPU, memory, and process metrics without reliance on external libraries. (Personal Project)",
+    tech: ["C", "Linux Systems Programming"],
+    codeLink: "https://github.com/prajwalkorde?tab=repositories"
+  },
+  {
+    title: "GuardFS",
+    year: "2025",
+    description: "Implemented a custom filesystem in userspace (FUSE) to automatically mirror file operations to a separate backup location. Intercepted and managed core VFS operations like open, read, write, and create to provide transparent, real-time file backup functionality without user intervention.",
+    tech: ["C", "FUSE", "Linux"],
+    codeLink: "https://github.com/prajwalkorde?tab=repositories"
+  },
+  {
+    title: "OpenTrace",
+    year: "2025",
+    description: "Developed a low-overhead system tracing tool using eBPF/bcc to monitor real-time file access. Engineered a C-based eBPF program to attach to the 'open' syscall kprobe, efficiently capturing event data directly in kernel space. A corresponding user-space Python script read this data from the eBPF map, logging all file open events across the system and demonstrating kernel-level observation.",
+    tech: ["eBPF", "bcc", "C", "Linux"],
     codeLink: "https://github.com/prajwalkorde?tab=repositories"
   },
   {
     title: "MASK-VISION",
     year: "2024",
-    description: "Developed an AI-based facemask detection system with real-time compliance monitoring and alerts to enhance safety. Managed the end-to-end project, including data preprocessing, model training, and deployment.",
-    tech: ["Python", "Tensorflow", "Keras", "OpenCV", "Tkinter", "Matplotlib"],
-    codeLink: "https://github.com/prajwalkorde?tab=repositories"
-  },
-  {
-    title: "E-Sell",
-    year: "2024",
-    description: "Designed and developed a comprehensive e-commerce platform using pure HTML, CSS, and JavaScript, enabling a local business to successfully migrate from an offline to an online platform.",
-    tech: ["HTML", "CSS", "JavaScript", "E-commerce"],
+    description: "Designed an AI-powered facemask detection system to monitor compliance in real-time. (College Project | Role: Sole Contributor). Spearheaded the project from concept to completion, handling all research, design, and model training. The application provided instant alerts to help reduce infection risk and improve public safety.",
+    tech: ["Python", "Keras", "NumPy", "TensorFlow"],
     codeLink: "https://github.com/prajwalkorde?tab=repositories"
   }
 ];
