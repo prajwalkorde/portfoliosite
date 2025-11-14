@@ -43,7 +43,7 @@ Clone the repository:
 
 Bash
 
-git clone https://github.com/prajwalkorde/your-repo-name.git
+git clone https://github.com/prajwalkorde/portfoliosite.git
 Navigate to the project directory:
 
 Bash
